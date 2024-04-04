@@ -1,0 +1,43 @@
+/*----------------------------------------------------------------------------------------
+header.scss
+----------------------------------------------------------------------------------------*/
+
+.l-header {
+    position: fixed;
+    z-index: 100;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin: auto;
+    background-color: #f4f3f3;
+
+
+    &__column {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding-left: 3%;
+        padding-right: 3%;
+        height: 100%;
+    }
+
+    img {
+        object-fit: contain;
+    }
+}
+
+@media screen and (min-width:769px) {
+
+}
+
+@media screen and (min-width:481px) {
+    .l-header {
+        height: 120px;
+    }
+}
+@media screen and (max-width:480px) {
+    .l-header {
+        height: 60px;
+    }
+}

@@ -1,0 +1,370 @@
+/*----------------------------------------------------------------------------------------
+top.scss
+----------------------------------------------------------------------------------------*/
+
+.p-mainVisual {
+    img {
+        width: 100%;
+    }
+}
+
+
+.p-scene {
+    position: relative;
+    background-color: #e5f8e5;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: 1;
+    }
+
+    &__column {
+        display: flex;
+
+    }
+
+    &__main {
+        background-color: rgba(255, 255, 255);
+        padding-right: 3%;
+        padding-left: 3%;
+        width: 83%;
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+
+    &__heading {
+        margin-left: auto;
+        max-width: 1220px;
+    }
+
+    &__list {
+        max-width: 1220px;
+        margin-left: auto;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        z-index: 10;
+    }
+
+    &__item {
+
+        h3 {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-weight: 900;
+            color: #00b900;
+
+            &::before {
+                content: url(../../images/line-lp/borderBefore.svg);
+                display: inline-block;
+                object-fit: contain;
+                width: 18px;
+            }
+
+            &::after {
+                content: url(../../images/line-lp/borderAfter.svg);
+                display: inline-block;
+                object-fit: contain;
+                width: 18px;
+            }
+        }
+
+        h4 {
+            font-weight: 900;
+
+            span {
+                color: #00b900;
+            }
+        }
+
+    }
+}
+
+
+
+.p-method {
+    background-color: #e5f8e5;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 0px 18%;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+
+
+    &__column {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+
+
+    }
+
+    &__heading {
+        margin-right: auto;
+        max-width: 1280px;
+        text-align: right;
+    }
+
+    &__main {
+        padding-right: 3%;
+        padding-left: 3%;
+        width: 83%;
+        background-color: rgba(255, 255, 255);
+        padding-bottom: 100px;
+    }
+
+    &__friend-list {
+        position: relative;
+        z-index: 10;
+        max-width: 1280px;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+
+
+    &__txt {
+        position: relative;
+        z-index: 10;
+        max-width: 1380px;
+        margin-right: auto;
+
+        p {
+            max-width: 630px;
+            margin-inline: auto;
+        }
+    }
+
+    &__link-list {
+        position: relative;
+        z-index: 10;
+        max-width: 1600px;
+        margin-left: auto;
+        display: flex;
+        gap: 25px;
+        padding: 80px 20px;
+    }
+}
+
+.p-method-obj {
+    line-height: 120px;
+}
+
+@media screen and (min-width:769px) {
+
+    .p-scene {
+        &::before {
+            background-image: url(../../images/line-lp/pc/notes01.png);
+        }
+
+        padding-top: 160px;
+
+        &__list {
+            gap: 0 2.5vw;
+        }
+
+        &__item {
+            width: calc(25%);
+
+            h3 {
+                font-size: clamp(2rem, 1.333rem + 0.868vw, 3rem);
+            }
+
+            h4 {
+                font-size: clamp(1.4rem, 1.133rem + 0.347vw, 1.8rem);
+                line-height: calc(28/18);
+                margin-bottom: 10px;
+                margin-top: 10px;
+            }
+
+            p {
+                font-size: clamp(1.3rem, 1.1rem + 0.26vw, 1.6rem);
+                line-height: calc(26/16);
+            }
+
+        }
+
+        &__item:nth-of-type(even) {
+            margin-top: 3%;
+        }
+
+        &__main {
+            padding-bottom: 11%;
+            background-image: url(../../images/line-lp/pc/instruments.png);
+        }
+    }
+
+    .p-scene-obj {
+        line-height: calc(90/124);
+    }
+
+    .p-method-obj {
+        margin-right: -15px;
+        line-height: calc(120/124);
+    }
+
+    .p-method {
+        padding-top: 160px;
+
+        &::before {
+            background-image: url(../../images/line-lp/pc/notes02.png);
+        }
+
+        &__main {
+            padding-bottom: 5%;
+        }
+
+        &__txt {
+            margin-top: 30px;
+
+            p {
+                font-size: clamp(1.2rem, 1.067rem + 0.174vw, 1.4rem);
+                line-height: calc(22/14);
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .p-mainVisual {
+        padding-bottom: 50px;
+    }
+
+    .p-scene {
+        &::before {
+            background-image: url(../../images/line-lp/sp/notes01.png);
+        }
+
+        padding-top: 20%;
+
+        &__main {
+            width: 87%;
+            padding-bottom: 23%;
+            background-image: url(../../images/line-lp/sp/instruments.png);
+
+        }
+
+        &__list {
+            flex-direction: column;
+            gap: 15vw;
+        }
+
+        &__item {
+            max-width: 520px;
+            margin-inline: auto;
+            width: calc(260vw/3.75);
+
+
+            h3 {
+                font-size: clamp(2.8rem, 0.224rem + 6.87vw, 5.5rem);
+
+                &::before {
+                    max-width: 30px;
+                    width: calc(15vw/3.75);
+                }
+
+                &::after {
+                    max-width: 30px;
+                    width: calc(15vw/3.75);
+                }
+            }
+
+            h4 {
+                font-size: clamp(1.8rem, 0.082rem + 4.58vw, 3.6rem);
+                line-height: calc(56/36);
+                margin-bottom: 6%;
+                margin-top: 6%;
+            }
+
+            p {
+                font-size: clamp(1.6rem, 0.073rem + 4.071vw, 3.2rem);
+                line-height: calc(48/32);
+            }
+        }
+    }
+
+    .p-scene-obj {
+        line-height: calc(80/116);
+    }
+
+    .p-method {
+        padding-top: 15%;
+
+        &::before {
+            background-image: url(../../images/line-lp/sp/notes02.png);
+        }
+
+        &__main {
+            width: 87%;
+            padding-bottom: 13%;
+        }
+
+        &__friend-list {
+            flex-direction: column;
+        }
+
+        &__txt {
+            margin-top: 8%;
+
+            p {
+                font-size: clamp(1.1rem, 0.05rem + 2.799vw, 2.2rem);
+                line-height: calc(32/22);
+                padding-right: 5%;
+                padding-left: 5%;
+            }
+        }
+
+        &__link-list {
+            flex-direction: column;
+            align-items: center;
+        }
+
+    }
+
+    .p-method-obj {
+        line-height: calc(100/116);
+    }
+}
+
+
+
+@media screen and (min-width:481px) {
+    .p-mainVisual {
+        padding-top: 105px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .p-mainVisual {
+        padding-top: 40px;
+    }
+
+    .p-method {
+        &__link-item {
+            max-width: 440px;
+            width: calc(300vw/3.75);
+        }
+    }
+}
