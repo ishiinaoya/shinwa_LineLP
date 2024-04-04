@@ -1,0 +1,21 @@
+.c-section-obj {
+    overflow: hidden;
+    font-family: "Madimi One", sans-serif;
+    font-size: 12.4rem;
+    writing-mode: vertical-lr;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+
+
+@media screen and (min-width:769px) {
+.c-section-obj{
+    font-size: clamp(9rem, 6.733rem + 2.951vw, 12.4rem);
+}
+}
+@media screen and (max-width:768px) {
+    .c-section-obj{
+        font-size: clamp(5.6rem, 0.256rem + 14.249vw, 11.2rem);
+    }
+}
